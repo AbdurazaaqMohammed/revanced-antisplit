@@ -157,12 +157,6 @@ public class LocalFileRecord {
         boolean dataDescriptorUsed = (gpFlags & ZipUtils.GP_FLAG_DATA_DESCRIPTOR_USED) != 0;
         boolean cdDataDescriptorUsed =
                 (cdRecord.getGpFlags() & ZipUtils.GP_FLAG_DATA_DESCRIPTOR_USED) != 0;
-        if (dataDescriptorUsed != cdDataDescriptorUsed) {
-            throw new ZipFormatException(
-                    "Data Descriptor presence mismatch between Local File Header and Central"
-                            + " Directory for entry " + entryName
-                            + ". LFH: " + dataDescriptorUsed + ", CD: " + cdDataDescriptorUsed);
-        }
         long uncompressedDataCrc32FromCdRecord = cdRecord.getCrc32();
         long compressedDataSizeFromCdRecord = cdRecord.getCompressedSize();
         long uncompressedDataSizeFromCdRecord = cdRecord.getUncompressedSize();
