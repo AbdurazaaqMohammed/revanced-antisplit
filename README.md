@@ -1,6 +1,8 @@
 # revanced-antisplit
 ReVanced Manager modified to work with APK files that have been converted from a split APK to a regular APK
 
+**Notice: In [AntiSplit M](https://github.com/AbdurazaaqMohammed/AntiSplit-M), I have fixed the below issues, there is no need to use this modified version. It is only necessary if you merge APKs using another tool like [REAndroid APKEditor](https://github.com/REAndroid/APKEditor), AntiSplit G2, etc.**
+
 # Why
 In order to install an APK on Android, it must first be signed, although there are workarounds for rooted devices. ReVanced Manager uses a library made by Google called [apksig](https://android.googlesource.com/platform/tools/apksig) to sign APKs, regardless of the user's root status.
 
